@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="LoansTest Suite">
+	<test thread-count="5" name="Home Loans">
+		<classes>
+			<class name="loans.HomeLoan1">
+				<methods>
+					<include name="FNBHoneLoans" />
+					<exclude name=".*Fraud.*" />
+
+				</methods>
+			</class>
+
+			<class name="loans.HomeLoan2">
+				<methods>
+					<exclude name=".*Fraud.*" />      <!-- . (dot) represent any character -->
+
+				</methods>
+			</class>
+
+		</classes>
+	</test> <!-- Tests -->
+	<test thread-count="5" name="Personal Loans">
+		<classes>
+			<class name="loans.PersonalLoan1" />
+			<class name="loans.PersonalLoan2" />
+		</classes>
+	</test> <!-- Tests -->
+	<test thread-count="5" name="Vehicle Loans">
+		<classes>
+			<class name="loans.VehicleLoans">
+
+				<methods>
+					<exclude name="VehicleLoanApplicatons" />
+				</methods>
+			</class>
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

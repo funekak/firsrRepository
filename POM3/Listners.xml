@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="LoansTest Suite">
+
+<listeners>
+   <listener class-name="listners.Listners"/>
+</listeners>
+
+	<test thread-count="5" name="Home Loans">
+	<groups>
+	<run>
+	
+	<include name= "Smoke"/>
+	</run>
+	</groups>
+	
+		<classes>
+			<class name="loans.HomeLoan1" />
+			<class name="loans.HomeLoan2" />
+
+		</classes>
+
+	</test> <!-- Tests -->
+	<test thread-count="5" name="Personal Loans">
+
+		<classes>
+
+			<class name="loans.PersonalLoan2" >
+			
+			<methods>
+			<exclude name= ". *Fraud*. *"/>
+			
+			</methods>
+			</class>
+		
+		</classes>
+	</test> <!-- Tests -->
+	<test thread-count="5" name="Vehicle Loans">
+		<classes>
+			<class name="loans.VehicleLoans" />
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->

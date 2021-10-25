@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+	<test thread-count="5" name="Test">
+
+		<classes>
+			<class name="testGuruTelecom.GuruTelecomTests">
+			<methods>
+
+				<include name="AddPlanToCustomers" />
+				<exclude name="TestSetUp_Assert_That_The_Heading_Is_Guru99_Telcom_And_Add_Customer" />
+				<include name="GIVEN_Invalid_Data_Entered_Then_Warning_Message_Should_Display" />
+				<include name="GIVEN_Invalid_Data_Entered_THEN_Alert_WHEN_Submit_Button_Is_Pressed" />
+				<include name="GIVEN_Valid_Data_Entered_THEN_Id_Displayed_WHEN_Submit_Button_Is_Pressed" />
+				<include name="GIVEN_Active_Customer_WHEN_submit_THEN_Active_Is_Displayed" />
+				<include name="GIVEN_Inactive_Customer_WHEN_Submit_THEN_INactive_Is_displayed" />
+				<include name="GIVEN_Active_Customer_WHEN_Submit_THEN_At_Least_One_pproved_TariffPlan_Is_Displayed" />
+				<include name="GIVEN_At_Least_One_Approved_Tariff_Plan_Is_Selected_WHEN_Add_Tariff_THEN_Success_Message_Displayed" />
+				
+			</methods>
+</class>
+			
+
+		</classes>
+	</test> <!-- Test -->
+</suite> <!-- Suite -->
